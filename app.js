@@ -70,13 +70,19 @@ const fs = require('fs');
 //     }
 // })
 
-fs.appendFile("hello.txt" , " Alhamdullilah" , (err) => {
+fs.appendFile("hello.txt" , " Alhamdulillah" , (err) => {
     if (err) {
         console.error(err.message);
     }else{
-        console.log("data add successfully");
+        console.log("data added Successfully");
         
     }
 })
 
-fs.copyFile("hello.")
+fs.copyFile("hello.txt", "copy.txt", (err) => {
+    if (err) {
+        console.error(err.message);
+    } else {
+        console.log("file copied successfully");
+    }
+});
